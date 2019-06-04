@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_1">
+
+    <fragment
+        android:id="@+id/fragment_1"
+        android:label="fragment_fragment_1"
+        android:name="com.example.android_replication_screen_flow.fragment_1"
+        tools:layout="@layout/fragment_fragment_1">
+        <action
+            android:id="@+id/action_fragment_1_to_fragment_2"
+            app:destination="@id/fragment_2"
+            app:enterAnim="@anim/slide_in_from_the_right"
+            app:exitAnim="@anim/slide_out_to_the_left"
+            app:popEnterAnim="@anim/slide_in_from_the_left"
+            app:popExitAnim="@anim/slide_out_to_the_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_2"
+        android:label="fragment_fragment_2"
+        android:name="com.example.android_replication_screen_flow.fragment_2"
+        tools:layout="@layout/fragment_fragment_2">
+        <action
+            android:id="@+id/action_fragment_2_to_fragment_3"
+            app:destination="@id/fragment_3"
+            app:enterAnim="@anim/slide_in_from_the_right"
+            app:exitAnim="@anim/slide_out_to_the_left"
+            app:popEnterAnim="@anim/slide_in_from_the_left"
+            app:popExitAnim="@anim/slide_out_to_the_right"
+            app:popUpTo="@+id/fragment_2"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_3"
+        android:label="fragment_fragment_3"
+        android:name="com.example.android_replication_screen_flow.fragment_3"
+        tools:layout="@layout/fragment_fragment_3"/>
+</navigation>
